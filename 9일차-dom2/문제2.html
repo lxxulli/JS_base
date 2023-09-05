@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제2</title>
+</head>
+<body>
+    <!-- 
+        *문제
+
+        1)html ul구조
+
+        2)script
+        - 밑 배열 사용
+        - 반복문, createE1ment, appendChild, innerHTML 활용
+
+        =>출력결과
+        네이버
+        유튜브
+        인스타그램
+     -->
+
+     <ul></ul>
+
+     <script>
+
+        const siteUrl = [
+            {
+                id: 0,
+                name: "네이버",
+                url:"http://naver.com",
+            },
+            {
+                id: 1,
+                name: "유튜브",
+                url:"http://youtube.com",
+            },
+            {
+                id: 2,
+                name: "인스타그램",
+                url:"http://instagram.com",
+            }
+        ]
+
+        // 내가 푼 거
+        // const bodyE1 = document.querySelector('body');
+
+        // const pE1 = document.createElement('ul');
+        
+        // console.log(pE1);
+        
+        // for(let i = 0; i < siteUrl.length; i++){
+        //     document.body.appendChild(pE1);
+        //     pE1.innerHTML = `<li>${siteUrl[i].name}</li>`
+        // }
+
+
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+        // 풀이
+
+        const ulE1 = document.querySelector('ul');
+        
+        for(let i = 0; i < siteUrl.length; i++){
+            const liE1 = document.createElement('li');
+            liE1.innerHTML = `<a href="${siteUrl[i].url}">${siteUrl[i].name}</a>`
+            ulE1.appendChild(liE1);
+        }
+
+        
+
+     </script>
+</body>
+</html>

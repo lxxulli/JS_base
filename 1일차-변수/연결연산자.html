@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연결연산자</title>
+
+    <script>
+
+        // *연결연산자
+        // =>같은타입 + 같은타입 = 같은 타입
+        // =>문자 + 숫자 = 문자
+        // =>숫자 + 문자 = 숫자
+
+        const name = "이유리";
+        const age = 12;
+        const age_2 = 10;
+
+        console.log("이름:", name);
+        console.log("이름:" + name);
+        console.log("나이:", age); //숫자로 인식됨
+        console.log("나이:" + age + age_2); //문자로 인식됨
+        console.log("나이:" + (age + age_2)); //해결법
+        // ,로 하면 띄어쓰기가 자동으로 됨
+        
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

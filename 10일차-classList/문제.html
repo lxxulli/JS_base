@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .box_wrap{
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 0;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            background-color: gold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            border-radius: 50%;
+        }
+
+        .active{
+            animation: motion 1s 1 forwards;
+        }
+
+        @keyframes motion {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0.5);
+            }
+            75%{
+                transform: scale(1.2);
+            }
+            100%{
+                border-top-right-radius: 0;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box_wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+        
+        // *문제
+        // 1)새로운 p 태그 생성
+        // 2)p태그 안쪽으로 네이버 새창으로 열리는 a태그 삽입
+        // 3)box_wrap의 자식으로 p태그 추가
+        // 4)1번 자식한테 active 추가 시키기
+        // 5)3번째 자식 삭제하기
+
+        const boxWrap = document.querySelector('.box_wrap');
+        const boxE1 = document.querySelector('.box:nth-child(1)');
+        const boxAll = document.querySelectorAll('.box');
+        console.log(boxAll)
+
+        const pE1 = document.createElement('p');
+        pE1.innerHTML = '<a href="https://www.naver.com/">네이버</a>';
+
+        boxE1.classList.add("active");
+        boxWrap.appendChild(pE1);
+        boxWrap.removeChild(boxAll[2]);
+
+    </script>
+    
+</body>
+</html>

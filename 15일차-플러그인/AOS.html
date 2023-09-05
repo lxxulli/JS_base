@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>AOS</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 300vh;
+        }
+        .box{
+            height: 80vh;
+            background-color: lightgray;
+        }
+        section{
+            padding: 150px 20%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .con{
+            width: 30%;
+            height: 400px;
+            background-color: darkmagenta;
+        }
+        .con_1{margin-top: 200px;}
+        .con_2{margin-top: 250px;}
+        .con_3{margin-top: 300px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <section>
+            <div class="con con_1" data-aos="fade-up"></div>
+            <div class="con con_2" data-aos="zoom-in-left"></div>
+            <div class="con con_3" data-aos="zoom-out-left"></div>
+        </section>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

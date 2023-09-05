@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form활용2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .btn_wrap{
+            width: 183px;
+            height: 50px;
+            border: 1px solid #eee;
+            display: flex;
+        }
+        .minus, .plus{
+            all: unset;
+            width: 50px;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e6e6e6;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .minus{
+            border-right: 1px solid #eee;
+        }
+        .num{
+            width: 80px;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .plus{
+            border-left: 1px solid #eee;
+        }
+        .txt_box{
+            width: 100px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn_wrap">
+        <button class="minus">-</button>
+        <div class="num">0</div>
+        <button class="plus">+</button>
+        <div class="txt_box"></div>
+    </div>
+
+    <script>
+
+        const mainusE1 = document.querySelector('.minus');
+        const numE1 = document.querySelector('.num');
+        const plusE1 = document.querySelector('.plus');
+        const txtE1 = document.querySelector('.txt_box');
+
+        let num = 0;
+        // let price = 13000;
+
+        plusE1.addEventListener('click',() => {
+            if(num >= 10){
+                alert("더 이상 증가할 수 없음!!!!!!");
+                // txtE1.innerText = "최대 10개까지만 가능합니다"
+                return;
+            }else{num <= 10}{
+            }
+            numE1.innerText = num += 1;
+            // price += price
+            // console.log(price);
+        });
+
+        mainusE1.addEventListener('click',() => {
+            if(num <= 0) return;
+            numE1.innerText = num -= 1;
+
+        });
+
+    </script>
+</body>
+</html>

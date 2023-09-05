@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+
+    <script>
+        const boxE1 = document.querySelector('.box');
+        const boxAll = document.querySelectorAll('.box');
+
+        // 비효율 - 코드가 늘어남
+        console.log(boxAll[0]);
+        console.log(boxAll[1]);
+        console.log(boxAll[2]);
+
+        // 효율
+        for(let i = 0; i < boxAll.length; i++){
+            console.log(boxAll[i]);
+        }
+    </script>
+</body>
+</html>

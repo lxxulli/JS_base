@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+
+    <script>
+
+        // *문제
+        // =>숫자를 입력 할 수 있는 prompt 제작
+        // =>입력한 숫자가 홀수면 "홀수입니다."
+        // =>짝수면 "짝수입니다"
+
+        const num = Number(prompt("숫자를 입력해주세요."))
+        const result = num % 2
+
+        if(result === 0){
+            document.write("짝수입니다.");
+        }else if(result === 1){
+            document.write("홀수입니다.");
+        }else{
+            document.write("숫자만 입력하슈")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

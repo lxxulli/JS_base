@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!--
+        min = 축약, 최적화
+        @10 = @ 뒤에는 버전이름
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .swiper{
+            width: 1000px;
+            height: 800px;
+        }
+        .con{
+            font-size: 50px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        *플러그인
+          ㄴ컴퓨터에 추가 프로그램을 설치하여 특정 기능을 수행할 수 있도록 하는 소프트웨어
+          ㄴ다른 사람이 만든 코드를 가져와서 우리 코드에 사용 가능하도록 세팅함
+          ㄴ플러그인들이 모인 것이 '라이브러리'라고 함
+
+        *플러그인 사용 시 주의사항
+          ㄴ반드시 공식문서 참고하기
+          ㄴ지정된 클래스, 아이디 등 선택자 범위 사용
+          ㄴ무분별하게 사용하면 사이트 최적화 문제 및 코드 충돌 등 개발중 오류가 발생할 수 있음
+
+        *플러그인 장점
+     -->
+
+     <!-- Slider main container -->
+    <div class="swiper slider_1">
+       <!-- Additional required wrapper -->
+       <div class="swiper-wrapper">
+         <!-- Slides -->
+         <div class="swiper-slide con">Slide 1</div>
+         <div class="swiper-slide con">Slide 2</div>
+         <div class="swiper-slide con">Slide 3</div>
+       </div>
+       <!-- If we need pagination -->
+       <div class="swiper-pagination"></div>
+     
+       <!-- If we need navigation buttons -->
+       <div class="swiper-button-prev"></div>
+       <div class="swiper-button-next"></div>
+     
+       <!-- If we need scrollbar -->
+       <div class="swiper-scrollbar"></div>
+     </div>
+
+
+     <script>
+        const swiper = new Swiper('.slider_1', {
+            // new 뒤에 생성자함수 = 메모리 낭비를 덜해서 최적화하기 좋음
+            // Optional parameters
+
+
+            // direction: 'vertical',
+            // ㄴ슬라이드 방향 (주석 처리하면 가로 처리됨)
+
+            autoplay: {
+               delay: 2000,
+               pauseOnMouseEnter: true
+            // ㄴ마우스를 올렸을 때 슬라이드가 정지됨
+            },
+            // ㄴ자동재생 설정
+
+            loop: true,
+            // ㄴ반복설정
+
+
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            // ㄴ페이지네이션 클릭 활성화
+            },
+            // ㄴ밑에 동그라미 효과
+        
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            // ㄴ화살표 설정(html에 화살표는 필수 아닌 선택사항)
+
+        
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              draggable: true
+            },
+            
+
+            keyboard: {
+              enabled: true,
+              onlyInViewport: false,
+            },
+        });
+     </script>
+</body>
+</html>

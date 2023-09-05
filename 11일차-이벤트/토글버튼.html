@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글버튼</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+
+        .btn_wrap{
+            width: 220px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: lightgray;
+            margin: 100px auto;
+            position: relative;
+            transition: 0.2s; /* 트랜스폼이나 트랜지션은 만든 대상한테 넣어야함 */
+        }
+        .circle{
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .bg_active{
+            background-color: #6bd55c;
+        }
+        .move_active{
+            left: 125px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn_wrap">
+        <div class="circle"></div>
+    </div>
+
+    <script>
+
+        // const btnE1 = document.querySelector('.circle');
+        // const wrapE1 = document.querySelector('.btn_wrap');
+        // console.log(wrapE1)
+
+        // let num = 0;
+
+        // const clickHandler = () => {
+        //     if(num === 0){
+        //         wrapE1.classList.add('bg_active');
+        //         btnE1.classList.add('move_active');
+        //         num++;
+        //     }else if(num === 1){
+        //         wrapE1.classList.remove('bg_active');
+        //         btnE1.classList.remove('move_active');
+        //         num--;
+        //     }
+        // }
+
+        // btnE1.addEventListener('click', clickHandler);
+
+
+        // ------------------------------------------------
+
+
+        // 문제풀이
+
+        const btnWrapE1 = document.querySelector('.btn_wrap');
+        const circleE1 = document.querySelector('.circle');
+
+        let active = true;
+        const clickHandler = () => {
+            if(active){
+                btnWrapE1.classList.add('bg_active');
+                circleE1.classList.add('move_active');
+                active = false;
+            }else if(!active){
+                btnWrapE1.classList.remove('bg_active');
+                circleE1.classList.remove('move_active');
+                active = true;
+            }
+        }
+        // ()=== false)도 가능 (!active)도 가능
+
+        btnWrapE1.addEventListener('click', clickHandler)
+
+    </script>
+</body>
+</html>

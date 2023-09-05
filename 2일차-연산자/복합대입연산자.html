@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // *복합 대입 연산자
+        // =>변수에 값을 대입하여 연산함
+        // =>증감연산자와는 다르게 5칙 연산 사용 가능
+        // ex)
+        // let num = 10;
+        // num += 1;
+        // num -= 1;
+        // num *= 1;
+        // num /= 1;
+        // num %= 1;        
+
+        let ric = 100;
+        let num = 10;
+            num = ric //이렇게 쓰면 숫자를 바꿔도 편리함
+        // ㄴ document.write(num += ric, "<br>");
+
+        // <귀찮은 예>
+        // num = num + 5; //15
+        // num = num + 5; //20
+
+        // <옳은 예>
+        document.write(num += ric, "<br>");
+        // document.write(num += 5, "<br>");
+        // document.write(num += 5, "<br>");
+
+
+        // document.write(num + 5, "<br>");
+        // document.write(num + 10, "<br>");
+        // document.write(num + 15, "<br>");
+        // document.write(num + 20, "<br>");
+        // document.write(num + 25, "<br>");
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

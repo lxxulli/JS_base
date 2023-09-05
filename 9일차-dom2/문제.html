@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+</head>
+<body>
+    <!-- 
+        *문제
+        1) con_wrap 클래스 부모 제작
+        2) 부모 안으로 10개 con 클래스 제작
+        3) script 사용하여 con에게 h3태그로 감싸진 숫자 1~10까지 입력된 내용 출력
+     -->
+
+     <div class="con_wrap">
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+         <div class="con"></div>
+     </div>
+    <script>
+
+        const conAll = document.querySelectorAll('.con');
+        console.log(conAll);
+
+        // 비효율 = 모르겠을 땐 비효율 코드를 먼저 써서 반복되는 거 찾아서 반복문 작성
+        // conAll[0].innerHTML = "<h3>1</h3>"
+        // conAll[1].innerHTML = "<h3>2</h3>"
+        // conAll[2].innerHTML = "<h3>3</h3>"
+
+        for(let i = 0; i < conAll.length; i++){
+            conAll[i].innerHTML = `<h3>${i + 1}</h3>`;
+        }
+
+    </script>
+</body>
+</html>

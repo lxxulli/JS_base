@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수</title>
+
+    <script>
+
+        // *매개변수
+        //     ㄴ함수 내부에서만 사용할 수 있도록 변수를 만듬
+        //     ㄴ함수에 매개변수를 작성하였으면 함수 호출 부분에 원하는 값을 넣어줘야 매개변수가 올바르게 실행함
+        //     ㄴ매개변수의 순서에 맞게 값을 넣어줘야됨
+        //     ㄴ매개변수가 여러개이면 콤마를 이용하여 여러 매개변수를 정의할 수 있음
+
+
+        // *비효율적 - 수작업으로 바꿔야 할 게 많음
+        // function intro_1(){
+        //     document.write("이름:이유리<br>");
+        //     document.write("나이:26<br>");
+        //     document.write("-----------------<br>");  
+        // }
+        
+        // function intro_2(){
+        //     document.write("이름:이정환<br>");
+        //     document.write("나이:23<br>");
+        //     document.write("-----------------<br>");  
+        // }
+
+        // intro_1();
+        // intro_2();
+
+
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+        
+        // *효율적
+        function intro_1(name, age){
+            document.write(`이름:${name}<br>`);
+            document.write(`나이:${age}<br>`);
+            document.write("-----------------<br>");  
+        }
+
+        intro_1("이유리", 26);
+        intro_1("이정환", 10);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

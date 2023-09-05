@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+
+    <script>
+
+        // *논리연산자
+        // => 두 개 이상의 값을 비교하여 참, 거짓값으로 반환함
+
+        // 1. AND(&&) 연산자 
+        //   ㄴ 값을 비교한 후 하나라도 거짓이 있으면 거짓값을 반환함
+        //   ㄴ ex)로그인 - 완벽 해야할 때
+        
+        // 2. OR(||) 연산자
+        //   ㄴ값을 비교한 후 하나라도 참이 있으면 참값을 반환함
+        //   ㄴ ex)회원가입 - 동의, 선택적 필수
+
+
+        // 3. NOT(!) 연산자
+        //   ㄴ참인 경우는 거짓, 거짓인 경우는 참으로 변경함
+        //   ㄴ ex)스위치 - 서로 값을 왔다갔다 스위칭 해야할 때 
+
+
+        const num_1 = 10;
+        const num_2 = 5;
+
+        document.write(num_1 > num_2 && num_1 < num_2, "<br>");
+        document.write(num_1 > num_2 || num_1 < num_2, "<br>");
+        document.write(!num_1 > num_2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

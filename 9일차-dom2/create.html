@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create</title>
+</head>
+<body>
+    <div class="wrap"></div>
+
+    <div class="box_wrap">
+        <div class="box box_1">1</div>
+        <div class="box box_2"></div>
+    </div>
+
+    <script>
+
+        const bodyE1 = document.querySelector('body');
+        const wrapE1 = document.querySelector('.wrap');
+        const boxWrapE1 = document.querySelector('.box_wrap');
+        const boxE1_1 = document.querySelector('.box_1');
+        const boxE1_2 = document.querySelector('.box_2');
+
+        const pE1 = document.createElement('p');
+        // => 원하는 태그를 생성할 수 있음
+
+        const headerE1 = document.createElement('header');
+        headerE1.innerHTML = "<h4>헤더 태그입니당</h4>"
+        boxE1_2.appendChild(headerE1);
+
+        pE1.innerText = "새로 생성된 태그에 글자를 넣을 수 있음"
+        wrapE1.appendChild(pE1);
+        // ㄴ부모 기준으로 자식을 추가할 수 있음
+        
+        // document.querySelector('.box_wrap').removeChild(boxE1_1); //이렇게 하면 코드가 길어져서 변수로 가져오는게 제일 깔끔함
+        boxWrapE1.removeChild(boxE1_1);
+        // ㄴ부모 기준으로 선택한 자식을 삭제할 수 있음
+        
+        // bodyE1.appendChild(pE1);
+        document.body.appendChild(pE1);
+        // ㄴbody태그는 querySelector를 이용하여 선택할 수도 있지만, document.body객체를 이용해서 선택하는 방법도 있음
+        
+        
+    </script>
+</body>
+</html>

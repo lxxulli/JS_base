@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+    
+    <script>
+
+        // *증감연산자
+        // =>무조건 1씩 증가하거나 1씩 감소함
+        // =>++를 앞에 붙이면 1이 증가된 상태에서 출력
+        // =>뒤에 ++를 붙이면 출력 후 1이 증가됨
+        // 무조건 1씩 덧셈, 뺄셈 밖에 안됨
+        
+
+        // <잘못된 예>
+        // const num = 10;
+        // document.write(++num);
+        //  ㄴ 상수에 숫자를 키우려 하는 건 오류 발생
+        //  ㄴ const는 쓰면 안됨
+
+
+        // <옳은 예>
+        let num = 10;
+
+        // ++num >> 11로 출력
+        // document.write(++num, "<br>");
+        // document.write(++num, "<br>");
+
+        // num++ >>10로 출력
+        document.write(num++, "<br>");
+        document.write(num++, "<br>");
+        document.write(num);
+
+
+
+        // <기본문제>
+        // document.write(num + 1, "<br>");
+        // document.write(num + 1, "<br>");
+        // document.write(num + 1, "<br>");
+        // document.write(num + 1, "<br>");
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

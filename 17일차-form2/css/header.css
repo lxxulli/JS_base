@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+header{
+    padding: 20px 200px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_wrap{
+    display: flex;    
+}
+
+.menu_wrap li{
+    margin-left: 50px;
+}

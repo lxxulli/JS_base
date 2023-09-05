@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일적용</title>
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <script>
+
+        // *script 스타일 적용
+        //     ㄴ선택자.style.css속성명 = "속성값"
+        //     ㄴ(-) 하이픈은 사용할 수 없기 때문에 이어지는 첫 번째 글자를 대문자(카멜케이스)로 처리
+        //     ㄴinline style로 들어감 (우선 순위를 확인할 것)
+        //     ㄴ단위 반드시 넣을 것
+        //     ex)
+        //     font-size => fontSize
+        //     background-color => backgroundColor
+
+        const boxE1 = document.querySelector('.box');
+
+        boxE1.style.width = "300px";
+        boxE1.style.height = "300px";
+        boxE1.style.backgroundColor = "teal";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제3</title>
+    <script>
+
+        // const menus = [
+        //     {
+        //         breakFast: "토스트",
+        //         lunch: "엽떡",
+        //         dinner: "치맥"
+        //     },
+        //     {
+        //         breakFast: "시리얼",
+        //         lunch: "막국수",
+        //         dinner: "닭발"
+        //     }
+        // ];
+
+        // console.log(menus[1].dinner)
+
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+        // *문제
+        // =>배열사용, 5명의 유저 정보를 객체로 저장
+        // =>5명의 유저 정보를 브라우저창에 출력
+
+        const users = [
+            {
+                id: 0,
+                username: "dldbfl",
+                email: "dbfl@naver.com",
+                avatar: "me.jpg"
+            },
+            {
+                id: 1,
+                username: "yuzhong",
+                email: "yu@naver.com",
+                avatar: "yu.jpg"
+            },
+            {
+                id: 2,
+                username: "nayeon",
+                email: "na@naver.com",
+                avatar: "na1.jpg"
+            },
+            {
+                id: 3,
+                username: "dajin",
+                email: "da@naver.com",
+                avatar: "da.jpg"
+            },
+            {
+                id: 4,
+                username: "caeyeon",
+                email: "cael@naver.com",
+                avatar: "cae.jpg"
+            }
+        ]
+
+        for(let i = 0; i <= users.length; i++){
+            // console.log(i); //0 ~ 5까지
+            document.write(`<h3>${users[i].id}번 유저</h3>`);
+            document.write(`<h3>아이디:${users[i].username}</h3>`);
+            document.write(`<h3>이메일:${users[i].email}</h3>`);
+            document.write(`<h3>프로필이미지:${users[i].avatar}</h3>`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

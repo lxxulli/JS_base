@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <style>
+        .title{
+            color: blueviolet;
+        }
+    </style>
+
+    <script>
+
+        // *반복문
+        // =>특정값을 반복할 때 사용
+        // =>start, end, 증감규칙으로 반복식 작성
+        // ex)
+        // for(let 변수 = 0; 변수 < 끝값; 증감규칙){
+        //     반복할 내용
+        // }
+
+        // for(let i = 0; i < 10; i++){
+        //     document.write(i * 10,"<br>")
+        // }
+
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+        // *문제1
+        // =>반복문을 사용하여 8단 출력하기
+        // *출력결과
+        // 8x1=8
+        // 8x2=16
+        // 8x3=24
+        // ...
+        // 8x9=72
+
+        // for(let i = 1; i < 10; i++){
+        //     document.write("8x",i,"=",i * 8,"<br>")
+        // }
+
+
+
+        //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+
+        // *문제2
+        // =>숫자를 입력하여 변수에 저장 후 입력한 숫자의 구구단 출력
+
+        // const input = Number(prompt("숫자를 입력해주세요"));
+
+        // for(let i = 1; i < 10; i++){
+        //     // document.write(input,"x",i,"=",i*input,"<br>")
+        //     document.write(`${input}X${i}=${input * i}<br>`)
+        // }
+
+        // *역따옴표(back tick)
+        // =>``기호를 사용하며 일반 따옴표처럼 문자 처리를 함
+        // =>대신 역따옴표 안쪽으로 ${}를 적게 되면 변수 처리를 할 수 있음 
+
+
+
+        // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+
+        // *문제3
+        // =>입력한 숫자가 짝수이면 짝수단, 홀수이면 홀수단만 출력
+        // ex)
+        // - 2를 입력 시 짝수이기 때문에
+        // 2단
+        // 2x2=4
+        // 2x4=8
+        // 2x6=12
+
+        // -3을 입력시 홀수이기 때문에
+        // 3단
+        // 3x1=3
+        // 3x3=9
+        // 3x5=15
+
+        const num = Number(prompt("숫자를 입력해주세요"));
+        const result = num % 2;
+        
+        document.write(`<h2 class="title">${num}단</h2>`);
+
+        if(result === 0){
+            for(let i = 2; i < 10; i += 2){
+            document.write(`${num}X${i}=${num * i}<br>`)
+            }
+        }else if(result === 1){
+            for(let i = 1; i < 10; i += 2){
+            document.write(`${num}X${i}=${num * i}<br>`)
+            }
+        }else{
+            document.write("숫자만 입력하세요")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

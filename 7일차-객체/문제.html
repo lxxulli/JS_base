@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+
+    <script>
+
+        // *문제
+        // 1. 유저 정보 객체 생성
+        // 2. 객체 속성은 username, email, profileimg
+        // 3. 속성에 맞게 속성값 지정
+
+        // const obj = {
+        //     username: "sideway",
+        //     email: "side@way.com",  
+        //     profilimg: "me.jpg",   
+        // }
+
+        // document.write("<h2>유저정보</h2>");
+        // document.write(`<b>유저아이디:</b>${obj.username}<br>`);
+        // document.write(`<b>이메일:</b>${obj.email}<br>`);
+        // document.write(`<b>프로필이미지:</b>${obj.profilimg}<br>`);
+        
+
+        //  ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+        // *문재2
+        // 1)객체에 유저아이디, 패스워드를 저장
+        // 2)입력한 유저 아이디가 객체에 저장된 값과 다르게 나오면 "아이디가 틀렸습니다."
+        // 2)입력한 유저 패스워드가 객체에 저장된 값과 다르게 나오면 "패스워드가 틀렸습니다."
+
+        // const user = {
+        //     id: "dldbfl",
+        //     pw: "dbfl1234"
+        // }
+
+        // const input_id = prompt("아이디를 입력해주세요");
+        // const input_pw = prompt("패스워드를 입력해주세요");
+
+        // if(input_id === `${user.id}`){
+        //     document.write("환영합니다")
+        // }else if(input_pw === `${user.pw}`){
+        //     document.write("환영합니다.");
+        // }
+
+
+        // 정답
+
+        const user = {
+            id: "dldbfl",
+            pw: "dbfl1234"
+        }
+
+        const inputUsername = prompt("아이디를 입력해주세요")
+        const inputUsernPassword = prompt("패스워드를 입력해주세요")
+
+        // if(inputUsername !== user.id){
+        //     document.write("<h2>아이디가 틀렸습니다</h2>")
+        // }else if(inputUsernPassword !== user.pw){
+        //     document.write("<h2>패스워드가 틀렸습니다</h2>")
+        // }else{
+        //     document.write("로그인 되었습니다")
+        // }
+
+
+        if(inputUsername !== user.id){
+            document.write("<h2>아이디가 틀렸습니다</h2>")
+        }else if(inputUsernPassword !== user.pw){
+            document.write("<h2>패스워드가 틀렸습니다</h2>")
+        }else if(inputUsername === user.id && inputUsernPassword === user.pw){
+            document.write("로그인 되었습니다")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

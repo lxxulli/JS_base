@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트객체</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .con_wrap{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .con{
+            width: 30%;
+            height: 300px;
+            background-color: salmon;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .active{
+            width: 40%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="con_wrap">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+    </div>
+
+    <script>
+
+        // * 이벤트 위임 *
+        //   ㄴ이벤트를 적용시킬 엘리먼트가 많다면 부모에게 이벤트를 위임하여 하나의 이벤트에 여러 출력밧을 표현할 수 있음
+
+        // * 이벤트 객체 *
+        //   ㄴ이벤트 함수의 첫 번째 매개변수로 변수명은 관례상 e or event로 사용함
+        //   ㄴ객체 내부에는 이벤트의 여러 정보를 가지고 있음
+
+
+        const conWrapE1 = document.querySelector('.con_wrap');
+
+        // = () << 안에 어떤 글을 넣어도 이벤트 속성으로 연결돰(그냥 이름임)
+        const clickHandler = (e) => {
+            // console.log(e.currentTarget);
+            // ㄴ현재 이벤트가 걸려있는 엘리먼트를 가져옴
+
+            // console.log(e.target);
+            // ㄴ클릭한 엘리먼트를 가져옴
+
+            e.target.classList.toggle("active");
+        }
+
+        conWrapE1.addEventListener('click', clickHandler)
+    </script>
+</body>
+</html>

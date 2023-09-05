@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+    <script>
+
+        // *method
+        //     ㄴ객체 내부에 있는 함수를 뜻함
+        //     ㄴ객체 내부에서 속성을 선택할 때
+        //     this.속성명으로 사용
+        
+
+        const obj = {
+            name: "이유리",
+            age:12,
+            intro: function(){
+                console.log(`이름: ${this.name}, 나이:${this.age}`)
+            }
+        }
+        console.log(obj.name)
+        obj.intro()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

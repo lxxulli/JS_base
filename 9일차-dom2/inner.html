@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+
+        const boxE1_1 = document.querySelector('.box:nth-child(1)');
+        console.log(boxE1_1);
+
+        // boxE1_1.innerText = "첫번째 박스";
+        // => 선택된 태그 내부에 글자를 넣을 수 있음
+
+        // boxE1_1.innerHTML = "<i>태그 입력</i>"
+        // => 선택된 태그 내부에 태그 및 글자를 넣을 수 있음
+        
+    </script>
+</body>
+</html>

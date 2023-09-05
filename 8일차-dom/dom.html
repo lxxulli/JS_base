@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>dom</title>
+    
+</head>
+<body>
+    <div class="box box_1"></div>
+    <div class="box box_2"></div>
+    <div class="box box_3">
+        <a href="#">js🤍</a>
+    </div>
+    <div class="box box_ 4" id="box_4"></div>
+
+    <script>
+
+        // *dom script (Document Object model)
+        //     ㄴ문서를 표현, 저장, 수정, 조작하는 행위를 뜻함
+
+        // document.querySelector(".선택자명");
+        //     ㄴ원하는 태그명을 입력하여 엘리먼트(태그)를 선택할 수 있음
+        //     ㄴ클래스명이 여러개라면, 첫 번째 태그만 선택됨
+        //     ㄴ태그, 클래스, 아이디, 자식, 자손, 구조선택자 등 사용가능
+
+        // const boxE1 = document.querySelector(".box");
+        // const boxE1 = document.querySelector(".box:ntn-child(2)");
+        // const boxE1 = document.querySelector(".box_3 a");
+        const boxE1 = document.querySelector("#box_4");
+        console.log(boxE1);
+    </script>
+</body>
+</html>

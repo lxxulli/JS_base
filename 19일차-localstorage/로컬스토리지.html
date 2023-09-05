@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    
+    <script>
+
+        // *localStorage
+        // =>브라우저 저장소
+        // =>키, 값으로 분류
+        // =>검사창 -> application -> LocalStorage에서 확인가능
+
+        localStorage.setItem("name", "sideway");
+        // =>로컬스토리지에 키와 값을 지정하여 저장 할 수 있음
+
+        const getName = localStorage.getItem("name");
+        // =>저장된 키값을 가져올 수 있음
+        console.log(getName);
+
+        localStorage.removeItem("name");
+        // =>키 명을 입력하여 저장된 값을 삭제함 
+
+
+    </script>
+    
+</body>
+</html>

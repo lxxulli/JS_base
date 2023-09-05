@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class List</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .con_wrap{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con{
+            width: 30%;
+            height: 300px;
+            background-color: salmon;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .active{
+            color: blue;
+        }
+        /* .active1{
+            color: blue;
+        }
+        .active2{
+            font-size: 100px;
+        }
+        .active3{
+            background-color: aquamarine;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="con_wrap">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+    </div>
+
+    <button>💗</button>
+
+    <script>
+
+        // const conE1_1 = document.querySelector('.con:nth-child(1)');
+        // const conE1_2 = document.querySelector('.con:nth-child(2)');
+        // const conE1_3 = document.querySelector('.con:nth-child(3)');
+        
+        // conE1_1.classList.add("active1");
+        // conE1_2.classList.add("active2");
+        // conE1_3.classList.add("active3");
+        // ㄴ클래스명을 입력하면 클래스를 추가 할 수 있음
+
+
+        
+        const conE1_2 = document.querySelector('.con:nth-child(2)');
+        const conAll = document.querySelectorAll('.con');
+        const btnE1 = document.querySelector('button');
+
+        // for(let i = 0; i < conAll.length; i++){
+        //     conAll[i].classList.add("active");
+        // }
+
+        // conE1_2.classList.remove("active");
+        // ㄴ원하는 클래스명을 삭제할 수 있음
+
+        btnE1.addEventListener("click", () => {
+            conE1_2.classList.toggle('active');
+            // ㄴadd.remove 동시에 사용
+
+            const check = conE1_2.classList.contains("active");
+            // ㄴ지정한 클래스명이 포함되어 있는지 확인 후 boolean값으로 반환함
+            console.log(check);
+        });
+
+    </script>
+    
+</body>
+</html>

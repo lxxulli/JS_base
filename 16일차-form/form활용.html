@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form활용</title>
+</head>
+<body>
+    <!-- <form action=""></form> -->
+    <!-- <form method="get"></form> 검색할 때 -->
+    <!-- <form method="post "> 로그인할 때 - 중요한 것들
+        <input type="text">
+    </form> -->
+    <form>
+        <input type="text">
+        <!-- <input type="botton" value="" 플레이스홀더="미리보기값"> << 그냥 버튼 -->
+        <!-- <input type="submit" value=""> << 똑같은 버튼 -->
+        <button>버튼</button> <!-- 버튼 시멘틱태그 -->
+    </form>
+    <!-- 인풋을 폼테그에 감싸지 않으면 검색을 했을 때 입력이 안됨 -->
+
+    <h3></h3>
+
+    <script>
+
+        // 폼태그에 이벤트를 걸 것
+
+        const formE1 = document.querySelector('form')
+        const inputE1 = document.querySelector('input')
+        const hE1 = document.querySelector('h3')
+
+        const handleSubmit = (e) =>{
+            e.preventDefault();
+            // ㄴ태그가 가지고 있는 기본적인 이벤트를 신행하지 않게 막음
+
+            const inputvalue = inputE1.value;
+            // ㄴ인풋태그에 입력한 값을 얻어올 수 있음
+            console.log(inputvalue);
+            
+            hE1.innerText = `${inputvalue}님 환영합니다`
+        }
+
+        formE1.addEventListener('submit', handleSubmit);
+
+    </script>
+</body>
+</html>

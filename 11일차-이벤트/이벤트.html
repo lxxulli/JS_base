@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: hotpink;
+        }
+        .bg_color{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <script>
+        const boxE1 = document.querySelector('.box');
+
+        // boxE1.addEventListener("click", () => {
+        //     console.log(123);
+        // });
+
+        let num = 0;
+
+        // lickHandler  >>  실무용어임
+        const clickHandler = () => {
+            // boxE1.style.backgroundColor = "red";
+            // boxE1.classList.add('bg_color');
+
+            // 클릭 했을 때 색 바꾸기
+            // boxE1.classList.toggle('bg_color'); //첫번째방법
+            if(num === 0){ //두번째방법
+                // console.log(`num의 값 : ${num}`); //0
+                // boxE1.style.backgroundColor = "hotpink";   
+                boxE1. classList.add('bg_color');       
+                num++;
+            }else if(num === 1){
+                // console.log(`num의 값 : ${num}`); //1
+                // boxE1.style.backgroundColor = "aqua";
+                boxE1.classList.remove('bg_color');      
+                num--;
+            }
+
+            // ** classList를 사용할 땐 클래스 우선 순위 꼭 !!!!!!! 확인 !!!!!
+        }
+
+        boxE1.addEventListener('click', clickHandler);
+
+    </script>
+</body>
+</html>
